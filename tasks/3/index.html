@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+        const memory = new WebAssembly.Memory({ 
+          // allocates 1 page of memory (64Kb)
+          initial: 1 
+        });
+
+        WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+          // pass shared memory to WASM instance
+          imports: { memory }
+        }).then(
+          () => {
+            // TODO: look at the WAT to determine the correct offset and length
+            // in shared memory to extract the whole greeting
+            const offset = 0;
+            const length = 0;
+            const bytes = new Uint8Array(memory.buffer, offset, length);
+            const greeting = new TextDecoder("utf8").decode(bytes);
+            result.innerText = greeting;
+          },
+        );
+    </script>
+    <div>
+      <a href="../4/">Next task</a>
+    </div>
+  </body>
+</html>

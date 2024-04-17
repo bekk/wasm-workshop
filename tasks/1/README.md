@@ -1,6 +1,4 @@
-# Task 1
-
-Run `npx serve` in this folder.
+# Task 1 - Modify WASM
 
 Look inside index.html and see how the WASM file is loaded.
 

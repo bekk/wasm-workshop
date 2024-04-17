@@ -1,0 +1,1 @@
+# Task 4 - Write to shared memory from JavaScript
