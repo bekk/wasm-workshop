@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm</title>
+  </head>
+  <body>
+    <div>
+        The Answer to the Ultimate Question of Life, the Universe, and Everything is
+        <span id="answer"></span>
+    </div>
+    <script>
+        WebAssembly.instantiateStreaming(fetch("answer.wasm"))
+            .then((obj) => {
+                // The function is available as an exported function on the wasm module
+                const calculateAnswer = obj.instance.exports.calculateAnswer;
+                
+                answer.innerText = calculateAnswer();
+            });
+    </script>
+  </body>
+</html>
