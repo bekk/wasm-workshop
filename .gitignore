@@ -1,2 +1,3 @@
 node_modules
-tasks/1/answer.wat
+tasks/1/*.wat
+tasks/2/*.wasm

@@ -5,18 +5,20 @@
     <title>wasm</title>
   </head>
   <body>
+    <script>
+      WebAssembly.instantiateStreaming(fetch("./answer.wasm"))
+        .then((obj) => {
+            // The function is available as an exported function on the wasm module
+            const calculateAnswer = obj.instance.exports.calculateAnswer;  
+            answer.innerText = calculateAnswer();
+        });
+    </script>
     <div>
         The Answer to the Ultimate Question of Life, the Universe, and Everything is
         <span id="answer"></span>
     </div>
-    <script>
-        WebAssembly.instantiateStreaming(fetch("answer.wasm"))
-            .then((obj) => {
-                // The function is available as an exported function on the wasm module
-                const calculateAnswer = obj.instance.exports.calculateAnswer;
-                
-                answer.innerText = calculateAnswer();
-            });
-    </script>
+    <div>
+      <a href="../2/">Next task</a>
+    </div>
   </body>
 </html>

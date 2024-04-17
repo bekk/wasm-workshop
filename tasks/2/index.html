@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm</title>
+  </head>
+  <body>
+    <script>
+        function functionToBeCalledFromWasm(input) {
+          // TODO: Communicate the input to the end user
+        }
+
+        WebAssembly.instantiateStreaming(
+          fetch("./call-javascript-from-wasm.wasm"),
+          // The second argument is an object which contains the necessary imports for the WASM instance.
+          // TODO: Add your function to the imports object
+          { imports: { } }
+        )
+        .then((obj) => {
+            const functionToBeCalledFromJavaScript = obj.instance.exports.functionToBeCalledFromJavaScript;
+            functionToBeCalledFromJavaScript();
+        });
+    </script>
+    <div>
+      <a href="../3/">Next task</a>
+    </div>
+  </body>
+</html>
