@@ -8,6 +8,6 @@ This task runs a WASM file that imports a page of shared memory and writes a gre
 Look inside the WAT in order to determine the offset in the shared memory and the length of the greeting in order to display it.
 
 Build WASM:
-```
-npx wat2wasm memory.wat --output memory.wasm
+```sh
+npx wat2wasm memory.wat
 ```

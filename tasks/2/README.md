@@ -1,10 +1,13 @@
 # Task 2 - Call JavaScript function from WASM
 
-TODO: Description
+In Task 1 we created a WASM module, exported a function from it, and called it from JavaScript.
 
+In this task we will send a JavaScript function to the WASM module, and have a WASM function call it.
+
+Fix the TODOs in index.html, then build the WASM.
 
 Build WASM:
-```
-npx wat2wasm call-javascript-from-wasm.wat --output call-javascript-from-wasm.wasm
+```sh
+npx wat2wasm callback.wat
 ```
 

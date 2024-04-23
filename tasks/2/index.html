@@ -7,12 +7,14 @@
   <body>
     <script>
         function functionToBeCalledFromWasm(input) {
-          // TODO: Communicate the input to the end user
+          // TODO: Implement user story
+          //  As a user I want to be alerted when my JavaScript function is called from WASM.
         }
 
         WebAssembly.instantiateStreaming(
-          fetch("./call-javascript-from-wasm.wasm"),
-          // The second argument is an object which contains the necessary imports for the WASM instance.
+          // The first argument is the WASM binary.
+          fetch("./callback.wasm"),
+          // The second argument is an object that contains imports for the WASM instance.
           // TODO: Add your function to the imports object
           { imports: { } }
         )
