@@ -121,6 +121,19 @@ Recap in a bit...
 - Difficult...
 - Task 6, AssemblyScript
 
+### Assemblyscript: Why
+
+- WASM is tedious
+- The interop is limited
+- Simplify WASM calling JS
+- Simplify JS calling WASM
+
+### Assemblyscript: How
+
+- WASM with a "Typescript-like" language
+- Limited set of Typescript syntax
+- ..with WASM types
+
 --
 
 ### TODO
