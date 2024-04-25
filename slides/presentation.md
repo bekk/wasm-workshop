@@ -119,7 +119,6 @@ Recap in a bit...
 - Complex data structures
 - Garbage collection?
 - Difficult...
-- Task 6, AssemblyScript
 
 ### Assemblyscript: Why
 
@@ -133,6 +132,10 @@ Recap in a bit...
 - WASM with a "Typescript-like" language
 - Limited set of Typescript syntax
 - ..with WASM types
+
+### What now?
+
+Task 6
 
 --
 
