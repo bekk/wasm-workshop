@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm</title>
+  </head>
+  <body>
+    <div>Offset: <span id="value1"></span></div>
+    <div>Value: <span id="value2"></span></div>
+    <script>
+        WebAssembly.instantiateStreaming(fetch("wasm-memory.wasm")).then(
+          (obj) => {
+            const { memory, read } = obj.instance.exports
+
+            function writeRandomlyToMemory(value) {
+              const index = Math.floor(Math.random() * 10)
+
+              const memoryArray = new Int32Array(obj.instance.exports.memory.buffer);
+              memoryArray[index] = value
+              
+              // TODO: As a user I want to calculate the correct offset so that I can read my memory
+              const offset = 0
+              return offset
+            }
+            
+            const offset = writeRandomlyToMemory(42)
+            const value = read(offset)
+
+            value1.innerText = offset
+            value2.innerText = value
+          },
+        );
+    </script>
+    <div>
+      <a href="../5/">Next task</a>
+    </div>
+  </body>
+</html>

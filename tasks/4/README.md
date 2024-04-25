@@ -1,6 +1,14 @@
 # Task 4 - Write to shared memory from JavaScript
 
-TODO:
-- Export shared memory from WASM
-- Write to shared memory from JS
-- Return number in shared memory from WASM
+Shared memory can also be created and exported from WASM.
+
+In this task you will write a value to the shared memory from JavaScript.
+
+When you call `read` with the offset the value is read and returned from WASM.
+
+Unfortunately it only works 10% of the time.
+
+Build WASM:
+```sh
+npx wat2wasm wasm-memory.wat
+```

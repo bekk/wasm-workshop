@@ -106,7 +106,7 @@ WebAssembly.instantiateStreaming(fetch("./my-wasm.wasm"))
 
 ### Wat now?
 
-Tasks 1 to 6.
+Tasks 1 to 5.
 Recap in a bit...
 
 --
@@ -119,6 +119,7 @@ Recap in a bit...
 - Complex data structures
 - Garbage collection?
 - Difficult...
+- Task 6, AssemblyScript
 
 --
 
