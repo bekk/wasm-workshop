@@ -1,35 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>wasm</title>
+    <title>task 6 - assemblyscript</title>
   </head>
   <body>
-    <div id="result"></div>
-    <script src="https://cdn.jsdelivr.net/npm/@assemblyscript/loader@0.27.27/umd/index.js"></script>
+    <h1>Call wasm from js and js from wasm</h1>
+    <div id="app">No worky.</div>
     <script type="module">
-      const imports = {
-        console: {
-          logIt: (returned) => {
-            // TODO Log the returned value
-            // TODO Find __getString on the `wasm` instance to recover the
-            // string value of what is returned from WASM.
-          },
-        },
-        env: {
-          abort: () => {
-            console.log("crashed.");
-          },
-        },
-      };
-      const wasm = await loader.instantiate(
-        fetch("./build/index.wasm"),
-        imports,
-      );
-      wasm.instance.exports.start();
+      // TODO 1: Import the named export "run" function from "./build/release.js"
+      // import {..
+
+      // TODO 3: Implement the global function "logFunctionInJs". It should log its received argument.
+
+      // TODO 2: Call the "run" function with a string, assign its output value to the result variable
+      let result;
+      if (result != null) {
+        console.log(result);
+        app.innerText = result;
+      }
     </script>
-    <div>
-      <a href="../7/">Next task</a>
-    </div>
   </body>
 </html>

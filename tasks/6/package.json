@@ -1,11 +1,19 @@
 {
-  "name": "loader",
-  "private": true,
-  "description": "description",
-  "version": "1.0.0",
-  "author": "@torgeir",
-  "license": "mit",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
   "scripts": {
-    "build": "asc src/index.ts --bindings raw --exportRuntime --exportStart start -o build/index.wasm -t build/index.wat"
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "test": "node tests",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.27.27"
   }
 }
