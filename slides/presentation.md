@@ -51,7 +51,6 @@ int factorial(int n) {
 }
 ```
 
-
 WebAssembly .wat text format:
 ```
 (func (param i64) (result i64)
@@ -68,8 +67,9 @@ WebAssembly .wat text format:
       i64.mul
   end)
 ```
-	
+
 WebAssembly .wasm binary format:
+
 ```
 00 61 73 6D 01 00 00 00
 01 06 01 60 01 7E 01 7E
@@ -141,7 +141,7 @@ Recap in a bit...
 ### Task 7
 
 - Snake (Rust/Kotlin/AssemblyScript)
-- Yew (Rust)
+- [Yew](https://yew.rs/docs/tutorial) (Rust): [Tutorial](https://yew.rs/docs/tutorial)
 - Blazor (C#)
 
 #### Blazor
