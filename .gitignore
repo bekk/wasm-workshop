@@ -2,3 +2,4 @@ node_modules
 tasks/1/*.wat
 tasks/2/*.wasm
 tasks/3/*.wasm
+tasks/6/build

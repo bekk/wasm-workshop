@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>wasm</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@assemblyscript/loader@0.27.27/umd/index.js"></script>
+    <script type="module">
+      const imports = {
+        console: {
+          logIt: (returned) => {
+            // TODO Log the returned value
+            // TODO Find __getString on the `wasm` instance to recover the
+            // string value of what is returned from WASM.
+          },
+        },
+        env: {
+          abort: () => {
+            console.log("crashed.");
+          },
+        },
+      };
+      const wasm = await loader.instantiate(
+        fetch("./build/index.wasm"),
+        imports,
+      );
+      wasm.instance.exports.start();
+    </script>
+    <div>
+      <a href="../7/">Next task</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "loader",
+  "private": true,
+  "description": "description",
+  "version": "1.0.0",
+  "author": "@torgeir",
+  "license": "mit",
+  "scripts": {
+    "build": "asc src/index.ts --bindings raw --exportRuntime --exportStart start -o build/index.wasm -t build/index.wat"
+  }
+}
