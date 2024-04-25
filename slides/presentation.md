@@ -177,3 +177,27 @@ Run C# code in browser! 🤯
 
 TODO: Add boilerplate for all languages
 
+### Resources
+
+- https://yew.rs
+- https://dioxuslabs.com/learn/0.5/
+- https://github.com/leptos-rs/leptos/
+- https://blog.ttulka.com/learning-webassembly-1-hello-world-of-wasm/
+- https://blog.ttulka.com/learning-webassembly-2-wasm-binary-format/
+- https://blog.ttulka.com/learning-webassembly-3-wat-programming-basics/
+- https://blog.ttulka.com/learning-webassembly-4-wasm-memory-and-working-with-strings/
+- https://blog.ttulka.com/learning-webassembly-5-running-wasm-in-the-browser/
+- https://blog.ttulka.com/learning-webassembly-6-running-wasm-in-nodejs/
+- https://blog.ttulka.com/learning-webassembly-7-introducing-wasi/
+- https://blog.ttulka.com/learning-webassembly-8-compiling-into-wasm/
+- https://blog.ttulka.com/learning-webassembly-9-assemblyscript-basics/
+- https://blog.ttulka.com/learning-webassembly-10-image-processing-in-assemblyscript/
+- https://wasmbyexample.dev/home.en-us.html
+- https://www.youtube.com/watch?v=u0Jgz6QVJqg
+- https://youtu.be/zqfF7Ssa2QI?si=FlkfOFEpH1ulMW6j
+- https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format
+- https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_Wasm
+- https://www.udemy.com/course/rust-webassembly-with-js-ts-the-practical-guide/?couponCode=2021PM20
+- https://news.ycombinator.com/item?id=39960537
+- https://github.com/mbasso/awesome-wasm
+- https://github.com/ffmpegwasm/ffmpeg.wasm
