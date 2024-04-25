@@ -1,21 +1,28 @@
-# WebAssembly
+# Webassembly
 
-## Part 1
+- Repo: https://github.com/bekk/wasm-workshop/
+- Slides: https://bekk.github.io/wasm-workshop/
 
-Presenter notes: Ask the audience about their experience with WebAssembly
+---
 
---
+# Part 1
 
-### Introduction
+???
+
+Ask the audience about their experience with WebAssembly
+
+---
+
+# Introduction
 
 - Released in march 2017
 - Goal was to enable high perforamnce applications on web pages
 - Something something compile once run everywhere -> super duper portable
 - WebAssembly 2.0 from 2022
 
--- 
+---
 
-### What is WASM?
+# What is WASM?
 
 - 001010101010101010101010101010101011101101010110
 - Stack machine / VM / sandbox / low level place
@@ -29,7 +36,7 @@ Presenter notes: Ask the audience about their experience with WebAssembly
 
 ---
 
-### Why use WASM?
+# Why use WASM?
 
 - Make us of existing code
 - Predictable (and fast) performance
@@ -39,7 +46,7 @@ Presenter notes: Ask the audience about their experience with WebAssembly
 
 ---
 
-### How do I create WASM?
+# How do I create WASM?
 
 C source code:
 ```C
@@ -91,9 +98,9 @@ WebAssembly .wasm binary format:
 0B
 ```
 
---
+---
 
-### But how do I load it???
+# But how do I load it???
 
 ```js
 WebAssembly.instantiateStreaming(fetch("./my-wasm.wasm"))
@@ -102,60 +109,68 @@ WebAssembly.instantiateStreaming(fetch("./my-wasm.wasm"))
     });
 ```
 
---
+---
 
-### Wat now?
+# Wat now?
 
 Tasks 1 to 5.
 Recap in a bit...
 
---
+---
 
-## Part 2
+# Part 2
 
-### Shared memory
+---
+
+# Shared memory
 
 - Data in/out
 - Complex data structures
 - Garbage collection?
 - Difficult...
 
-### Assemblyscript: Why
+---
+
+# Assemblyscript: Why
 
 - WASM is tedious
 - The interop is limited
 - Simplify WASM calling JS
 - Simplify JS calling WASM
 
-### Assemblyscript: How
+---
+
+# Assemblyscript: How
 
 - WASM with a "Typescript-like" language
 - Limited set of Typescript syntax
 - ..with WASM types
 
-### What now?
+---
+
+# What now?
 
 Task 6
 
---
+---
 
-### TODO
+# TODO
 
 - Event loop
 - Multi-threading
 
---
+---
 
-### WASM in the future
+# WASM in the future
 
 - Roadmap
 - WASI
 - WASM Components
 - WASM GC
 
---
+---
 
-### Task 7
+# Task 7
 
 - Snake (Rust/Kotlin/AssemblyScript)
 - [Yew](https://yew.rs/docs/tutorial) (Rust): [Tutorial](https://yew.rs/docs/tutorial)
@@ -177,7 +192,9 @@ Run C# code in browser! 🤯
 
 TODO: Add boilerplate for all languages
 
-### Resources
+---
+
+# Resources
 
 - https://yew.rs
 - https://dioxuslabs.com/learn/0.5/
