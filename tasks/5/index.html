@@ -6,10 +6,26 @@
   </head>
   <body>
     <h1>Task 5</h1>
-    <script></script>
-    <div></div>
-    <div>
-      <a href="../6/">Next task</a>
-    </div>
+    <script>
+      WebAssembly.instantiateStreaming(fetch("data.wasm")).then(
+          (obj) => {
+            const { memory } = obj.instance.exports
+
+            const offset = 0;
+            const length = 4512;
+            const bytes = new Uint8Array(memory.buffer, offset, length);
+
+            // TODO: Make sense of the data
+            const data = bytes
+
+            value.innerText = data
+          },
+        );
+    </script>
+    <p>
+      Data:
+      <code id="value"></code>  
+    </p>
+    <a href="../6/">Next task</a>
   </body>
 </html>

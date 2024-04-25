@@ -4,7 +4,7 @@ Shared memory can also be created and exported from WASM.
 
 In this task you will write a value to the shared memory from JavaScript.
 
-When you call `read` with the offset the value is read and returned from WASM.
+When you call `read` with an offset, the value is read and returned from WASM.
 
 Unfortunately it only works 10% of the time.
 

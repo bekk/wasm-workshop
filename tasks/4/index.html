@@ -6,8 +6,6 @@
   </head>
   <body>
     <h1>Task 4</h1>
-    <div>Offset: <span id="value1"></span></div>
-    <div>Value: <span id="value2"></span></div>
     <script>
         WebAssembly.instantiateStreaming(fetch("wasm-memory.wasm")).then(
           (obj) => {
@@ -33,8 +31,8 @@
           },
         );
     </script>
-    <div>
-      <a href="../5/">Next task</a>
-    </div>
+    <p>Offset: <span id="value1"></span></p>
+    <p>Value: <span id="value2"></span></p>
+    <a href="../5/">Next task</a>
   </body>
 </html>
