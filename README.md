@@ -7,5 +7,5 @@ npm install
 ```
 
 ```sh
-npx serve tasks
+npx serve
 ```
