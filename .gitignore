@@ -4,3 +4,5 @@ tasks/2/*.wasm
 tasks/3/*.wasm
 tasks/4/*.wasm
 tasks/6/build
+/.direnv/
+/.DS_Store
