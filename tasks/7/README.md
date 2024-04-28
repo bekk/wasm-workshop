@@ -25,14 +25,14 @@ however you will need to translate the provided code to your chosen language you
 
 1. Install Rust: If you haven't already, install Rust by following the instructions [here](https://www.rust-lang.org/tools/install).
 2. Install `wasm-pack` by running `cargo install wasm-pack`. This installs the `wasm-pack` tool globally, which helps compile the Rust code to Webassembly.
-4. Ensure that your working directory is inside the folder `tasks/7` before proceeding
-3. Compile the Rust code to a WASM module by running `wasm-pack build --target bundler rust-snake`
-4. Install npm dependencies with `npm i`
-5. Serve the web application using `npm run serve`. 
-6. Open localhost:8080 in your browser and you should be good to go :) Try controlling the snake with your arrow keys.
+3. Ensure that your working directory is inside the folder `tasks/7` before proceeding
+4. Compile the Rust code to a WASM module by running `wasm-pack build --target bundler rust-snake`
+5. Install npm dependencies with `npm i`
+6. Serve the web application using `npm run serve`. 
+7. Open localhost:8080 in your browser and you should be good to go :) Try controlling the snake with your arrow keys.
 
 ## Notes
 
 - The JavaScript part of the application resides in the `index.js` file
 - The Rust part of the application resides in the `rust-snake/src/lib.rs` file.
-- Webpack will automatically reload changes in the `index.js` and `index.html` files, but not changes in the Rust code. This requires recompiling the code (see step 3 above).
+- Webpack will automatically reload changes in the `index.js` and `index.html` files, but not changes in the Rust code. This requires recompiling the code (see step 4 above).
