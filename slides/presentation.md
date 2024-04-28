@@ -190,14 +190,14 @@ template: inverse
 
 Om man bygger med `--bindings esm`
 
-```assemblyscript
+```as
 // assembly/index.ts
 export function doit(what: string): string {
   return `Did ${what}.`
 }
 ```
 
-```esm
+```js
 // js
 import { doit } from "./build/release.js";
 
@@ -210,7 +210,7 @@ console.log(doit("it")); // Did it.
 
 Om man bygger med `--bindings esm`
 
-```assemblyscript
+```as
 // assembly/index.ts
 @external("env", "greet")
 declare function greet(name: string): string;
@@ -232,7 +232,7 @@ run() // Hello, torgeir
 
 Om man bygger med `--bindings raw`
 
-```assemblyscript
+```as
 // assembly/index.ts
 @external("index", "greeter")
 declare function greet(name: string): string;
@@ -263,7 +263,7 @@ wasm.run() // Hello, torgeir
 # Assemblyscript: Objekter
 _by-copy_
 
-```assemblyscript
+```as
 // assembly/index.ts
 // `type` is not supported 😞
 class Person { name!: string }
@@ -292,7 +292,7 @@ run(person).greeting; // Hello, torgeir
 # Assemblyscript: Objekter
 _by-reference_
 
-```assemblyscript 
+```as 
 // assembly/index.ts
 class Point {
   constructor(
