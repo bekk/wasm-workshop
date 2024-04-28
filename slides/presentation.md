@@ -3,7 +3,7 @@ class: center, middle, inverse
 ---
 
 template: inverse
-# Webassembly
+# WebAssembly
 
 ---
 
@@ -159,7 +159,7 @@ template: inverse
 
 ---
 
-# Assemblyscript: Why
+# AssemblyScript: Why
 
 - WASM is tedious
 
@@ -173,7 +173,7 @@ template: inverse
 
 ---
 
-# Assemblyscript: How
+# AssemblyScript: How
 
 - WASM with a _Typescript-like_ language
 
@@ -201,7 +201,7 @@ template: inverse
 
 ---
 
-# Assemblyscript: JS -> WASM
+# AssemblyScript: JS -> WASM
 
 Om man bygger med `--bindings esm`
 
@@ -221,7 +221,7 @@ console.log(doit("it")); // Did it.
 
 ---
 
-# Assemblyscript: WASM -> JS
+# AssemblyScript: WASM -> JS
 
 Om man bygger med `--bindings esm`
 
@@ -275,7 +275,7 @@ wasm.run() // Hello, torgeir
 
 ---
 
-# Assemblyscript: Objekter
+# AssemblyScript: Objekter
 _by-copy_
 
 ```as
@@ -304,7 +304,7 @@ run(person).greeting; // Hello, torgeir
 
 ---
 
-# Assemblyscript: Objekter
+# AssemblyScript: Objekter
 _by-reference_
 
 ```as 
@@ -348,7 +348,7 @@ pointToString(point); // Point(2, 4)
 
 ---
 
-# Rust and Webassembly
+# Rust and WebAssembly
 
 - The advantages of Rust, in the browser or Node
 - Good interop with JS, ES modules
@@ -370,7 +370,7 @@ pointToString(point); // Point(2, 4)
 # What now?
 
 - Task 6: AssemblyScript
-- Task 7: Snake game with Rust and Webassembly
+- Task 7: Snake game with Rust and WebAssembly
   - Optionally AssemblyScript or Kotlin
 - Or, do what ever you want. Maybe check out:
 
