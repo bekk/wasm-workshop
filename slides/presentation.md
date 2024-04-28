@@ -174,39 +174,58 @@ template: inverse
 - Limited set of Typescript syntax
 - ..with WASM types
 
-# Rust:
+---
 
-TODO daniel
+# Rust: Why Rust?
+
+- System programming language
+  - Fast and memory-efficient
+  - No runtime or garbage collector
+- Features:
+  - Memory safety, thread safety
+  - Rich type system
+  - Modern tooling
+  - High-level, zero-cost abstractions
+
+---
+
+# Rust and Webassembly
+
+- The advantages of Rust, in the browser or Node
+- Good interop with JS, ES modules
+- Small code size
+- Rust/Wasm book: https://rustwasm.github.io/docs/book/
+
+---
+
+# Rust / JS interop
+
+- Call Rust functions from JS
+  - Or JS functions from Rust
+- Generate glue code automatically
+  - ✅ Send/receive strings
+  - ✅ Send/receive complex data types (lists, objects)
 
 ---
 
 # What now?
 
-Task 6 og 7
-
----
-
-# Task 7
-
-- Snake (Rust/Kotlin/AssemblyScript)
-- [Yew](https://yew.rs/docs/tutorial) (Rust): [Tutorial](https://yew.rs/docs/tutorial)
-- Blazor (C#)
-
-TODO link to blazor
+- Task 6: AssemblyScript
+- Task 7: Snake game with Rust and Webassembly
+  - Optionally AssemblyScript or Kotlin
+- Or, do what ever you want. Maybe check out:
 
 #### Blazor
 
-Run C# code in browser! 🤯
+[Run C# code in browser!](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/intro) 🤯
 
 #### Yew
 
-"React" written in Rust, compiled to WASM.
+["React" written in Rust, compiled to WASM](https://yew.rs/docs/tutorial)
 
-#### Snake  🍎 🐍
+#### Kotlin
 
-- Rust
-- Kotlin
-- AssemblyScript
+Compile Kotlin to WASM, or [Kotlin Compose Multiplatform](https://kotlinlang.org/docs/wasm-get-started.html)
 
 ---
 

@@ -35,4 +35,4 @@ however you will need to translate the provided code to your chosen language you
 
 - The JavaScript part of the application resides in the `index.js` file
 - The Rust part of the application resides in the `rust-snake/src/lib.rs` file.
-- Webpack will hot reload changes in the `index.js` and `index.html` files, but not changes in the Rust code. This requires recompiling the code (see step 3 above).
+- Webpack will automatically reload changes in the `index.js` and `index.html` files, but not changes in the Rust code. This requires recompiling the code (see step 3 above).
