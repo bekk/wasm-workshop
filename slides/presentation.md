@@ -43,6 +43,8 @@ Ask the audience about their experience with WebAssembly
 - Low level control
 - Portability
 - You look cool as a developer
+- TODO: Event loop
+- TODO: Multi-threading
 
 ---
 
@@ -146,27 +148,15 @@ Recap in a bit...
 - Limited set of Typescript syntax
 - ..with WASM types
 
+# Rust:
+
+TODO daniel
+
 ---
 
 # What now?
 
-Task 6
-
----
-
-# TODO
-
-- Event loop
-- Multi-threading
-
----
-
-# WASM in the future
-
-- Roadmap
-- WASI
-- WASM Components
-- WASM GC
+Task 6 og 7
 
 ---
 
