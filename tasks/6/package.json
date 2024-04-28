@@ -10,6 +10,7 @@
     "asbuild:debug": "asc assembly/index.ts --target debug",
     "asbuild:release": "asc assembly/index.ts --target release",
     "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "watch": "npx nodemon --exec 'npm run asbuild' --watch assembly/ --ext ts",
     "start": "npx serve ."
   },
   "devDependencies": {

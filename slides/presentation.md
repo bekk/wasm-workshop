@@ -165,14 +165,160 @@ template: inverse
 - The interop is limited
 - Simplify WASM calling JS
 - Simplify JS calling WASM
+- `npx asinit .`
 
 ---
 
 # Assemblyscript: How
 
-- WASM with a "Typescript-like" language
+- WASM with a _Typescript-like_ language
 - Limited set of Typescript syntax
-- ..with WASM types
+- Initially only with WASM types `i32` & `f32`
+- [Host bindings](https://www.assemblyscript.org/compiler.html#host-bindings) for [`esm`](https://tc39.es/ecma262/#sec-modules)
+  - Number
+  - String
+  - Array
+  - BigInt
+  - ArrayBuffer
+  - StaticArray
+  - Object without constructors (by-copy)
+  - Object with constructors (by-reference)
+
+---
+
+# Assemblyscript: JS -> WASM
+
+Om man bygger med `--bindings esm`
+
+```assemblyscript
+// assembly/index.ts
+export function doit(what: string): string {
+  return `Did ${what}.`
+}
+```
+
+```esm
+// js
+import { doit } from "./build/release.js";
+
+console.log(doit("it")); // Did it.
+```
+
+---
+
+# Assemblyscript: WASM -> JS
+
+Om man bygger med `--bindings esm`
+
+```assemblyscript
+// assembly/index.ts
+@external("env", "greet")
+declare function greet(name: string): string;
+
+export function run(): void {
+  greet("torgeir")
+}
+```
+
+```js
+// js
+import { run } from "./build/release.js";
+globalThis.greet = (name) => console.log("Hello", name)
+run() // Hello, torgeir
+```
+---
+
+## Eller
+
+Om man bygger med `--bindings raw`
+
+```assemblyscript
+// assembly/index.ts
+@external("index", "greeter")
+declare function greet(name: string): string;
+
+export function run(): string {
+  return greet("torgeir")
+}
+```
+
+```js
+// js
+import { instantiate } from "./build/release.js";
+const wasm = await instantiate(
+  await WebAssembly.compileStreaming(await fetch("./build/release.wasm")),
+  {
+    index: {
+      greeter: function (name) {
+        console.log("Hello", name)
+      },
+    },
+  },
+);
+wasm.run() // Hello, torgeir
+```
+
+---
+
+# Assemblyscript: Objekter
+_by-copy_
+
+```assemblyscript
+// assembly/index.ts
+// `type` is not supported 😞
+class Person { name!: string }
+class Greeting { greeting!: string }
+
+@external("env", "greeter")
+declare function greet(_: Person): Greeting;
+
+export function run(person: Person): Greeting {
+  return greet(person)
+}
+```
+
+```js
+import { run } from "./build/release.js";
+globalThis.greeter = ({ name }) => ({
+  greeting: `Hello, ${name}`,
+});
+
+const person = { name: "torgeir" }
+run(person).greeting; // Hello, torgeir
+```
+
+---
+
+# Assemblyscript: Objekter
+_by-reference_
+
+```assemblyscript 
+// assembly/index.ts
+class Point {
+  constructor(
+    readobly x: i32,
+    readobly y: i32
+  )
+}
+export function newPoint(x: i32, y: i32): Point {
+  return new Point(x, y);
+}
+export function pointToString(p: Point): string {
+  return `Point(${p.x}, ${p.y})`;
+}
+```
+
+```js
+// js
+import { newPoint, pointToString } from "./build/release.js";
+
+let point = newPoint(2, 4);
+console.log(point); // Number { 37920 }
+
+pointToString(point); // Point(2, 4)
+```
+
+---
 
 ---
 
