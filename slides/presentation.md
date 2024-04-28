@@ -162,9 +162,13 @@ template: inverse
 # Assemblyscript: Why
 
 - WASM is tedious
-- The interop is limited
+
+- Interop is limited
+
 - Simplify WASM calling JS
+
 - Simplify JS calling WASM
+
 - `npx asinit .`
 
 ---
@@ -172,17 +176,28 @@ template: inverse
 # Assemblyscript: How
 
 - WASM with a _Typescript-like_ language
+
 - Limited set of Typescript syntax
+
 - Initially only with WASM types `i32` & `f32`
+
+- [Stricter](https://www.assemblyscript.org/concepts.html#strictly-typed) than Typescript
+  - No `any` or `undefined`
+  - No union types (yet)
+  - No `type`
+  - Objects must be typed, using `Map` or `class`:
+  - [`.get(x)` on uninitialized arrays throw](https://www.assemblyscript.org/stdlib/array.html#array)
+  - [`.get(x)` on maps without the key throws](https://www.assemblyscript.org/stdlib/map.html#map)
+  
 - [Host bindings](https://www.assemblyscript.org/compiler.html#host-bindings) for [`esm`](https://tc39.es/ecma262/#sec-modules)
-  - Number
-  - String
-  - Array
-  - BigInt
-  - ArrayBuffer
-  - StaticArray
-  - Object without constructors (by-copy)
-  - Object with constructors (by-reference)
+  - `Number`
+  - `String`
+  - `Array`
+  - `BigInt`
+  - `ArrayBuffer`
+  - `StaticArray`
+  - `Object` without `constructor()` (by-copy)
+  - `Object` with `constructor()` (by-reference)
 
 ---
 
@@ -317,8 +332,6 @@ console.log(point); // Number { 37920 }
 
 pointToString(point); // Point(2, 4)
 ```
-
----
 
 ---
 
