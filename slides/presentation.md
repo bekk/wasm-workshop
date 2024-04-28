@@ -41,41 +41,77 @@ Ask the audience about their experience with WebAssembly
 # Introduction
 
 - Released in march 2017
-- Goal was to enable high perforamnce applications on web pages
-- Something something compile once run everywhere -> super duper portable
+- Goal was to enable high performance applications on web pages
+- Compile once run everywhere
 - WebAssembly 2.0 from 2022
 
 ---
 
 # What is WASM?
 
-- 001010101010101010101010101010101011101101010110
-- Stack machine / VM / sandbox / low level place
+- File formats
+  - .wasm (binary)
+  - .wat (WebAssembly Text)
+- Stack based virtual machine
+  - Web browser
+  - Node
+  - Other...
 - Statically typed, compiled AOT
 - Only knows numerical types: i32, i64, f32, f64
-- Can interop with JS
-    - Call WASM functions from JS
-    - Call JS functions from WASM
 - Cannot access the DOM directly
+  - Sandbox with (limited) API
+- Can interop with JS
+  - Call WASM functions from JS
+  - Call JS functions from WASM
 - Shared memory
 
+.footnote[
+- https://rustwasm.github.io/docs/book/what-is-webassembly.html
+]
+
+---
+
+# Concurrency/parallelism
+
+- Synchronous (blocking)
+- Multi-threading
+  - Web Workers + SharedArrayBuffer
+  - wasi-threads (WebAssembly System Interface)
+
+.footnote[
+- https://github.com/WebAssembly/wasi-threads
+- https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+]
 ---
 
 # Why use WASM?
 
-- Make us of existing code
-- Predictable (and fast) performance
+- Existing code
+- Predictable and fast performance
+  - Just-in-time compilation (JIT)
+  - Garbage collection
 - Low level control
 - Portability
-- You look cool as a developer
-- TODO: Event loop
-- TODO: Multi-threading
+
+.footnote[
+- https://www.figma.com/blog/webassembly-cut-figmas-load-time-by-3x/
+- https://rustwasm.github.io/book/why-rust-and-webassembly.html
+]
 
 ---
 
-# How do I create WASM?
+# How do I create WASM?!
 
-C source code:
+- Factorial
+  - 10! = 10 \* 9 \* 8 \* ... \* 2 \* 1
+- C
+- WebAssembly Text
+
+---
+
+# C vs. WebAssembly Text
+
 ```C
 int factorial(int n) {
   if (n == 0)
@@ -85,7 +121,6 @@ int factorial(int n) {
 }
 ```
 
-WebAssembly .wat text format:
 ```wat
 (func (param i64) (result i64)
   local.get 0
@@ -102,7 +137,9 @@ WebAssembly .wat text format:
   end)
 ```
 
-WebAssembly .wasm binary format:
+---
+
+# WebAssembly binary (.wasm)
 
 ```hex
 00 61 73 6D 01 00 00 00
@@ -130,7 +167,7 @@ WebAssembly .wasm binary format:
 # But how do I load it???
 
 ```js
-WebAssembly.instantiateStreaming(fetch("./my-wasm.wasm"))
+WebAssembly.instantiateStreaming(fetch("./factorial.wasm"))
     .then((module) => {
         // Do something with the module
     });
