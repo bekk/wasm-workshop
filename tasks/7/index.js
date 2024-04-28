@@ -8,17 +8,18 @@ function draw_canvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-function draw_snake(head) {
-    ctx.fillRect(head.x * cell_size, head.y * cell_size, cell_size, cell_size);
+function draw_snake(body) {
+    for (const cell of body) {
+        ctx.fillRect(cell.x * cell_size, cell.y * cell_size, cell_size, cell_size);
+    }
 }
 
 function gameloop(world) {
     world.update();
-    const head = world.get_head();
+    const body = world.get_body();
 
     draw_canvas();
-    draw_snake(head);
-
+    draw_snake(body);
     setTimeout(() => gameloop(world), 100);
 }
 

@@ -13,6 +13,7 @@ Some code is provided to get you started:
 Some things that are not implemented:
 - Food
 - The ability for the snake to grow beyond one cell
+- Detecting whether the snake has collided with its own body
 
 ## Running the code
 
