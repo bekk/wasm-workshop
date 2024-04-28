@@ -86,7 +86,7 @@ int factorial(int n) {
 ```
 
 WebAssembly .wat text format:
-```
+```wat
 (func (param i64) (result i64)
   local.get 0
   i64.eqz
@@ -104,7 +104,7 @@ WebAssembly .wat text format:
 
 WebAssembly .wasm binary format:
 
-```
+```hex
 00 61 73 6D 01 00 00 00
 01 06 01 60 01 7E 01 7E
 03 02 01 00
