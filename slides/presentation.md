@@ -1,3 +1,8 @@
+name: inverse
+class: center, middle, inverse
+---
+
+template: inverse
 # Webassembly
 
 ---
@@ -24,6 +29,7 @@
 
 ---
 
+template: inverse
 # Part 1
 
 ???
@@ -139,6 +145,7 @@ Recap in a bit...
 
 ---
 
+template: inverse
 # Part 2
 
 ---
