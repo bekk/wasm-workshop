@@ -1,7 +1,26 @@
 # Webassembly
 
-- Repo: https://github.com/bekk/wasm-workshop/
-- Slides: https://bekk.github.io/wasm-workshop/
+---
+
+## Agenda
+
+- 17:00 Mat
+- 17:10 Slides part 1
+- 17:30 Oppgave 1-5: samarbeid, snakk sammen, spør om hjelp
+- 18:15 Recap oppgaver part 1
+- 18:30 Slides part 2: Assemblyscript & Rust
+- 19:00 Oppgave 6 og 7
+- 20:00 Ferdig! De som vil forsetter.
+
+???
+
+17:00 Mat skal være på plass, spising
+17:10 Slides part 1: Begynner presentasjon mens folk spiser
+17:30 Oppgave 1-5, samarbeid, snakk sammen, spør om hjelp
+18:15 Recap oppgaver part 1
+18:30 Slides part 2: assemblyscript & rust
+19:00 Oppgave 6, 7. Eller jew, eller blazor
+20:00 Ferdig! De som vil forsetter.
 
 ---
 
@@ -166,6 +185,8 @@ Task 6 og 7
 - [Yew](https://yew.rs/docs/tutorial) (Rust): [Tutorial](https://yew.rs/docs/tutorial)
 - Blazor (C#)
 
+TODO link to blazor
+
 #### Blazor
 
 Run C# code in browser! 🤯
@@ -179,8 +200,6 @@ Run C# code in browser! 🤯
 - Rust
 - Kotlin
 - AssemblyScript
-
-TODO: Add boilerplate for all languages
 
 ---
 
