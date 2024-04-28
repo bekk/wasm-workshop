@@ -12,8 +12,14 @@ Some code is provided to get you started:
 
 Some things that are not implemented:
 - Food
-- The ability for the snake to grow beyond one cell
+- The ability for the snake to grow
 - Detecting whether the snake has collided with its own body
+
+## Other languages instead of Rust?
+
+If you prefer to solve this task using another programming language than Rust, then you can
+for instance use AssemblyScript or Kotlin instead. We _think_ this should be possible without _too_ much hassle,
+however you will need to translate the provided code to your chosen language yourself.
 
 ## Running the code
 
