@@ -275,7 +275,7 @@ export function run(): void {
 ```js
 // js
 import { run } from "./build/release.js";
-globalThis.greet = (name) => console.log("Hello", name)
+globalThis.greet = (name) => `Hello, ${name}`
 run() // Hello, torgeir
 ```
 ---
@@ -302,7 +302,7 @@ const wasm = await instantiate(
   {
     index: {
       greeter: function (name) {
-        console.log("Hello", name)
+        return `Hello, ${name}`
       },
     },
   },
