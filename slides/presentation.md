@@ -17,16 +17,6 @@ template: inverse
 - 19:00 Oppgave 6 og 7
 - 20:00 Ferdig! De som vil forsetter.
 
-???
-
-17:00 Mat skal være på plass, spising
-17:10 Slides part 1: Begynner presentasjon mens folk spiser
-17:30 Oppgave 1-5, samarbeid, snakk sammen, spør om hjelp
-18:15 Recap oppgaver part 1
-18:30 Slides part 2: assemblyscript & rust
-19:00 Oppgave 6, 7. Eller jew, eller blazor
-20:00 Ferdig! De som vil forsetter.
-
 ---
 
 template: inverse
@@ -240,7 +230,7 @@ template: inverse
 
 # AssemblyScript: JS -> WASM
 
-Om man bygger med `--bindings esm`
+If you build with `--bindings esm`
 
 ```as
 // assembly/index.ts
@@ -260,7 +250,7 @@ console.log(doit("it")); // Did it.
 
 # AssemblyScript: WASM -> JS
 
-Om man bygger med `--bindings esm`
+If you build with `--bindings esm`
 
 ```as
 // assembly/index.ts
@@ -280,9 +270,9 @@ run() // Hello, torgeir
 ```
 ---
 
-## Eller
+## Or
 
-Om man bygger med `--bindings raw`
+If you build with `--bindings raw`
 
 ```as
 // assembly/index.ts
@@ -312,7 +302,7 @@ wasm.run() // Hello, torgeir
 
 ---
 
-# AssemblyScript: Objekter
+# AssemblyScript: Objects
 _by-copy_
 
 ```as
@@ -341,7 +331,7 @@ run(person).greeting; // Hello, torgeir
 
 ---
 
-# AssemblyScript: Objekter
+# AssemblyScript: Objects
 _by-reference_
 
 ```as 
