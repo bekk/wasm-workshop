@@ -267,8 +267,8 @@ Om man bygger med `--bindings esm`
 @external("env", "greet")
 declare function greet(name: string): string;
 
-export function run(): void {
-  greet("torgeir")
+export function run(): string {
+  return greet("torgeir")
 }
 ```
 
