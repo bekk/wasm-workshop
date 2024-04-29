@@ -181,7 +181,7 @@ template: inverse
 
 - Data in/out
 - Complex data structures
-- Garbage collection?
+- Garbage collection ([proposal](https://github.com/WebAssembly/gc/blob/main/proposals/gc/Overview.md))
 - Difficult...
 
 ---
